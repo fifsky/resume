@@ -4,4 +4,4 @@ https://caixudong.com
 
 ## Thanks
 
-Fork the [gwuhaolin](https://github.com/gwuhaolin/resume)
+Fork from the [gwuhaolin](https://github.com/gwuhaolin/resume)

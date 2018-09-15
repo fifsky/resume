@@ -154,6 +154,13 @@ a {
   .info {
     float: left;
     line-height: 22px;
+    .iconfont {
+      fill: #fff;
+      vertical-align: text-top;
+      @media screen and (max-width: 720px) {
+        margin: 5px 8px;
+      }
+    }
   }
   .contact {
     float: right;

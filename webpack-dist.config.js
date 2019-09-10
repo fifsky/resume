@@ -83,6 +83,7 @@ module.exports = {
     new EndWebpackPlugin(async () => {
       const run = async () => {
         const html5ToPDF = new HTML5ToPDF({
+          launchOptions:{dumpio: true},
           inputPath: `${path.resolve(outputPath, 'index.html')}`,
           outputPath: `${path.resolve(outputPath, 'resume.pdf')}`
         })

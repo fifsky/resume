@@ -5,7 +5,7 @@ const DefinePlugin = require('webpack/lib/DefinePlugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const EndWebpackPlugin = require('end-webpack-plugin');
 const { WebPlugin } = require('web-webpack-plugin');
-const HTML5ToPDF = require("html5-to-pdf")
+// const HTML5ToPDF = require("html5-to-pdf")
 
 const outputPath = path.resolve(__dirname, 'public');
 module.exports = {
@@ -81,20 +81,20 @@ module.exports = {
       allChunks: true,
     }),
     new EndWebpackPlugin(async () => {
-      const run = async () => {
-        const html5ToPDF = new HTML5ToPDF({
-          launchOptions:{dumpio: true},
-          inputPath: `${path.resolve(outputPath, 'index.html')}`,
-          outputPath: `${path.resolve(outputPath, 'resume.pdf')}`
-        })
-
-        await html5ToPDF.start()
-        await html5ToPDF.build()
-        await html5ToPDF.close()
-        console.log("PDF Generate DONE")
-      }
-
-      await run()
+      // const run = async () => {
+      //   const html5ToPDF = new HTML5ToPDF({
+      //     launchOptions:{dumpio: true},
+      //     inputPath: `${path.resolve(outputPath, 'index.html')}`,
+      //     outputPath: `${path.resolve(outputPath, 'resume.pdf')}`
+      //   })
+      //
+      //   await html5ToPDF.start()
+      //   await html5ToPDF.build()
+      //   await html5ToPDF.close()
+      //   console.log("PDF Generate DONE")
+      // }
+      //
+      // await run()
     }),
   ]
 };

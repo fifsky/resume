@@ -21,7 +21,7 @@ function publishGhPages() {
   });
 }
 
-const outputPath = path.resolve(__dirname, '.public');
+const outputPath = path.resolve(__dirname, 'public');
 module.exports = {
   output: {
     path: outputPath,
@@ -96,9 +96,9 @@ module.exports = {
     }),
     new EndWebpackPlugin(async () => {
       // 自定义域名
-      fs.writeFileSync(path.resolve(outputPath, 'CNAME'), 'caixudong.com');
+      // fs.writeFileSync(path.resolve(outputPath, 'CNAME'), 'caixudong.com');
 
-      await publishGhPages();
+      // await publishGhPages();
 
       // 调用 Chrome 渲染出 PDF 文件
       const chromePath = findChrome();
@@ -107,7 +107,7 @@ module.exports = {
       ]);
 
       // 重新发布到 ghpages
-      await publishGhPages();
+      // await publishGhPages();
     }),
   ]
 };

@@ -23,7 +23,7 @@ jobs:
         htmlFile: ./public/index.html
         ouput: ./public/resume.pdf
 
-    - name: Build and Deploy
+    - name: Deploy
       uses: JamesIves/github-pages-deploy-action@master
       env:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}

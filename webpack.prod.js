@@ -32,8 +32,19 @@ module.exports = {
         ]
       },
       {
-        test: /\.(gif|png|jpe?g|eot|woff|ttf|svg|pdf)$/,
+        test: /\.(gif|png|jpe?g|eot|woff|ttf|svg)$/,
         use: 'base64-inline-loader',
+      },
+      {
+        test: /\.(pdf)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options:{
+              name: '[name].[ext]',
+            }
+          }
+        ],
       },
     ]
   },

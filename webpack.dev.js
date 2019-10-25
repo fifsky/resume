@@ -18,7 +18,6 @@ module.exports = {
     rules: [
       {
         test: /\.(css|scss)$/,
-        // 提取出css
         use: [
           'style-loader',
           'css-loader',

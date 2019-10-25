@@ -17,12 +17,6 @@ jobs:
     - name: Npm install And build
       run: npm install && npm run build
 
-    - name: HTML to PDF
-      uses: fifsky/html-to-pdf-action@master
-      with:
-        htmlFile: ./public/index.html
-        outputFile: ./public/resume.pdf
-
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@master
       env:

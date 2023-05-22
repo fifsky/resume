@@ -19,8 +19,9 @@ jobs:
 
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@v4
-      env:
-        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        BRANCH: gh-pages
-        FOLDER: public
-        CNAME: caixudong.com
+      with:
+        branch: gh-pages
+        folder: public
+        clean: true
+        clean-exclude: |
+          CNAME

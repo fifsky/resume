@@ -25,3 +25,4 @@ jobs:
         clean: true
         clean-exclude: |
           CNAME
+          resume.pdf

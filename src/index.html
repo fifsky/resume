@@ -8,7 +8,7 @@
   <base target="_blank">
 </head>
 <body>
-<p class="last-modified">最后更新于2019年04月</p>
+<p class="last-modified">最后更新于2023年05月</p>
 
 <main class="content">
 
@@ -114,19 +114,19 @@
           <!--经历:工作-->
           <div class="item">
             <header class="item-hd">
-              <h3 class="item-name">Dentsu Aegis Network · VeryStar(上海)</h3>
+              <h3 class="item-name">Dentsu · VeryStar(上海)</h3>
               <span class="item-time">2015.01 至今</span>
               <a class="btn item-more" href="https://pay.verystar.net">支付技术总监</a>
             </header>
             <div class="item-bd">
-              <p class="item-des">创建支付团队，开发线下支付及支付营销产品<a href="https://pay.verystar.net">轻易付</a>，主要工作：</p>
+              <p class="item-des">创建支付团队，开发<a href="https://pay.verystar.net">线下支付</a>及支付营销产品（电子券、CRM）等，主要工作：</p>
               <ul class="section-content">
                 <li>需求分析、技术选型和服务器基础架构</li>
                 <li>基于NW.js的客户端开发</li>
                 <li>Golang基础框架、库，单元测试框架开发</li>
                 <li>持续集成CI/CD推广和实施</li>
-                <li>服务器、业务稳定性监控维护，日志服务</li>
-                <li>大数据同步，数据库分布式部署</li>
+                <li>基于OpenTelemetry实施服务的可观测性架构，包括logs、trace、metrics</li>
+                <li>分布式数据库、大数据相关技术实现和维护</li>
                 <li>团队管理，成员技术培训</li>
               </ul>
             </div>
@@ -183,22 +183,6 @@
         </header>
         <div class="section-bd">
           以下是我的开源项目与总结，请点击链接查看详情
-          <!--项目:PHP-->
-          <div class="item">
-            <header class="item-hd">
-              <a class="btn item-more" href="http://php.net/">PHP</a>
-            </header>
-            <div class="item-bd">
-              <ul>
-                <li><a href="https://github.com/verystar/framework">framework</a>&nbsp;遵循PSR-4的框架，借鉴了Laravel的PHP框架</li>
-                <li><a href="https://github.com/verystar/very">Very</a>&nbsp;PHP框架的示例</li>
-                <li>
-                  <a href="https://github.com/fifsky/docker-php">Docker</a>&nbsp;适合PHP开发者的Docker编排
-                </li>
-              </ul>
-            </div>
-          </div>
-
           <!--项目:Golang-->
           <div class="item">
             <header class="item-hd">
@@ -210,7 +194,7 @@
                   <a href="https://github.com/ilibs/gosql">gosql</a>&nbsp;基于sqlx的简单Golang ORM
                 </li>
                 <li>
-                  <a href="https://github.com/goapt/gee">gee</a>&nbsp;基于gin封装的快速开发框架
+                  <a href="https://github.com/goapt/gee">gee</a>&nbsp;基于gin和protobuf协议封装的快速开发框架
                 </li>
                 <li>
                   <a href="https://github.com/goapt/envconf">envconf</a>&nbsp;基于.env文件分离敏感信息的配置库
@@ -226,6 +210,22 @@
                 </li>
                 <li>
                   <a href="https://github.com/fifsky/drone-wechat-work">drone-wechat-work</a>&nbsp;Drone企业微信机器人插件
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!--项目:PHP-->
+          <div class="item">
+            <header class="item-hd">
+              <a class="btn item-more" href="http://php.net/">PHP</a>
+            </header>
+            <div class="item-bd">
+              <ul>
+                <li><a href="https://github.com/verystar/framework">framework</a>&nbsp;遵循PSR-4的框架，借鉴了Laravel的PHP框架</li>
+                <li><a href="https://github.com/verystar/very">Very</a>&nbsp;PHP框架的示例</li>
+                <li>
+                  <a href="https://github.com/fifsky/docker-php">Docker</a>&nbsp;适合PHP开发者的Docker编排
                 </li>
               </ul>
             </div>
@@ -260,6 +260,34 @@
         </header>
         <div class="section-bd">
 
+          <!--Golang-->
+          <div class="item">
+            <header class="item-hd">
+              <span class="item-time">架构</span>
+              <a class="btn item-more">精通</a>
+            </header>
+            <div class="item-bd">
+              <ul class="section-content">
+                <li>熟练掌握分布式应用架构，对分布式架构中所需要的分布式事务、可观测性（链路追踪、日志、监控指标）有深刻的理解</li>
+              </ul>
+            </div>
+          </div>
+
+          <!--Golang-->
+          <div class="item">
+            <header class="item-hd">
+              <span class="item-time">Golang</span>
+              <a class="btn item-more">精通</a>
+            </header>
+            <div class="item-bd">
+              <ul class="section-content">
+                <li>掌握Golang基本语法与标准库</li>
+                <li>理解Golang协程，Channel，读写锁，接口设计</li>
+                <li>开发了多个Golang基础类库，详见开源项目</li>
+              </ul>
+            </div>
+          </div>
+
           <!--PHP-->
           <div class="item">
             <header class="item-hd">
@@ -273,22 +301,6 @@
                 <li>熟悉CI、Laravel、Symfony框架</li>
                 <li>熟悉PHP异步框架Swoole</li>
                 <li>遵循<a href="https://www.php-fig.org/">PSR</a>协议</li>
-              </ul>
-            </div>
-          </div>
-
-
-          <!--Golang-->
-          <div class="item">
-            <header class="item-hd">
-              <span class="item-time">Golang</span>
-              <a class="btn item-more">熟练</a>
-            </header>
-            <div class="item-bd">
-              <ul class="section-content">
-                <li>掌握Golang基本语法与标准库</li>
-                <li>理解Golang协程，Channel，读写锁，接口设计</li>
-                <li>开发了多个Golang基础类库，详见开源项目</li>
               </ul>
             </div>
           </div>

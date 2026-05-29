@@ -1,506 +1,716 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<title>蔡旭东 · 简历</title>
-<meta name="author" content="蔡旭东">
-<meta name="description" content="全栈工程师，Dentsu VeryStar 支付技术总监，11 年支付系统架构经验，主导线下支付平台从零搭建与 Golang 技术栈演进">
-<meta name="keywords" content="Golang, PHP, 支付系统, 分布式架构, 可观测性, 后端开发, 简历">
-<meta name="generator" content="Kami">
-<style>
-  @font-face {
-    font-family: "TsangerJinKai02";
-    src: url("https://cdn.jsdelivr.net/gh/tw93/Kami@main/assets/fonts/TsangerJinKai02-W04.ttf") format("truetype");
-    font-weight: 400;
-    font-style: normal;
-  }
-  @font-face {
-    font-family: "TsangerJinKai02";
-    src: url("https://cdn.jsdelivr.net/gh/tw93/Kami@main/assets/fonts/TsangerJinKai02-W05.ttf") format("truetype");
-    font-weight: 500;
-    font-style: normal;
-  }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>蔡旭东 · 简历</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-lite-webfont@1.7.0/style.min.css"
+    />
+    <style>
+      :root {
+        /* Zen Theme */
+        --bg: #f9f8f6;
+        --surface: #ffffff;
+        --text-main: #2c2a29;
+        --text-muted: #7a7571;
+        --text-light: #a39e98;
+        --accent: #8c3a3a;
+        --accent-bg: rgba(140, 58, 58, 0.06);
+        --border: #e5e0d8;
+        --border-thick: #2c2a29;
+        --font-main: "LXGW WenKai", "LXGW WenKai Lite", serif;
+        --font-mono: "SF Mono", "Fira Code", monospace;
+        --radius: 2px;
+        --shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+        --layout-gap: 32px;
+        --section-gap: 40px;
+      }
 
-  @page {
-    size: A4;
-    margin: 11mm 13mm 11mm 13mm;
-    background: #f5f4ed;
-  }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
 
-  * { box-sizing: border-box; margin: 0; padding: 0; }
+      body {
+        background-color: var(--bg);
+        color: var(--text-main);
+        font-family: var(--font-main);
+        font-size: 14px;
+        line-height: 1.65;
+        -webkit-font-smoothing: antialiased;
+        transition:
+          background-color 0.3s,
+          color 0.3s;
+        padding: 40px 20px;
+      }
 
-  :root {
-    --parchment: #f5f4ed;
-    --ivory:     #faf9f5;
-    --sand:      #e8e6dc;
-    --border:    #e8e6dc;
-    --border-soft: #e5e3d8;
-    --near-black: #141413;
-    --dark-warm: #3d3d3a;
-    --olive:     #504e49;
-    --stone:     #6b6a64;
-    --brand:     #1B365D;
-    --brand-tint: #EEF2F7;
-    --brand-tint-strong: #E4ECF5;
-    --serif: "TsangerJinKai02", "Source Han Serif SC", "Noto Serif CJK SC", "Songti SC", "STSong", Georgia, serif;
-    --sans: var(--serif);
-  }
+      .resume-container {
+        max-width: 900px;
+        margin: 0 auto;
+        background-color: var(--surface);
+        padding: 60px 80px;
+        box-shadow: var(--shadow);
+        border-radius: var(--radius);
+        transition: all 0.3s;
+      }
 
-  html, body { background: var(--parchment); }
+      /* Typography */
+      h1,
+      h2,
+      h3,
+      h4 {
+        color: var(--text-main);
+        font-weight: 700;
+        line-height: 1.2;
+        text-wrap: pretty;
+      }
+      a {
+        color: var(--accent);
+        text-decoration: none;
+        transition: opacity 0.2s;
+      }
+      a:hover {
+        opacity: 0.7;
+      }
+      p {
+        text-wrap: pretty;
+      }
 
-  @media screen {
-    body { max-width: 210mm; margin: 0 auto; padding: 11mm 13mm; }
-  }
+      /* Header */
+      .header {
+        border-bottom: 2px solid var(--border-thick);
+        padding-bottom: var(--layout-gap);
+        margin-bottom: var(--layout-gap);
+      }
+      .header-name {
+        font-size: 36px;
+        letter-spacing: 0.05em;
+        margin-bottom: 8px;
+      }
+      .header-role {
+        font-size: 18px;
+        color: var(--accent);
+        margin-bottom: 16px;
+        font-weight: 500;
+      }
+      .header-contact {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        font-size: 13px;
+        color: var(--text-muted);
+      }
+      .header-contact span {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .header-contact .sep {
+        color: var(--text-light);
+        user-select: none;
+      }
 
-  body {
-    color: var(--near-black);
-    font-family: var(--serif);
-    font-size: 10pt;
-    line-height: 1.45;
-    letter-spacing: 0.3pt;
-    widows: 3;
-    orphans: 3;
-  }
+      /* Metrics */
+      .metrics {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+        margin-bottom: var(--section-gap);
+        padding-bottom: var(--layout-gap);
+        border-bottom: 1px solid var(--border);
+      }
+      .metric {
+        display: flex;
+        flex-direction: column;
+      }
+      .metric-val {
+        font-size: 28px;
+        font-weight: 700;
+        color: var(--accent);
+        font-family: var(--font-mono);
+        line-height: 1;
+        margin-bottom: 4px;
+      }
+      .metric-val small {
+        font-size: 14px;
+        margin-left: 2px;
+      }
+      .metric-label {
+        font-size: 12px;
+        color: var(--text-muted);
+      }
 
-  .serif { font-family: var(--serif); }
-  a { color: var(--brand); text-decoration: none; }
+      /* Sections */
+      section {
+        margin-bottom: var(--section-gap);
+      }
+      .section-title {
+        font-size: 18px;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        padding-bottom: 8px;
+        margin-bottom: 24px;
+        border-bottom: 2px solid var(--text-main);
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+      }
+      .section-subtitle {
+        font-size: 13px;
+        color: var(--text-muted);
+        font-weight: 400;
+        text-transform: none;
+        letter-spacing: 0;
+      }
 
-  /* HEADER */
-  .header {
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 3mm;
-    margin-bottom: 3mm;
-    border-bottom: 0.5pt solid #e3baa9;
-  }
-  .name {
-    font-family: var(--serif);
-    font-size: 28pt;
-    font-weight: 500;
-    letter-spacing: 0.5pt;
-    color: var(--near-black);
-    line-height: 1;
-    margin-bottom: 0.8mm;
-  }
-  .role-line {
-    font-size: 12pt;
-    font-weight: 500;
-    color: var(--brand);
-    margin-bottom: 1.2mm;
-  }
+      /* Summary */
+      .summary {
+        font-size: 15px;
+        line-height: 1.8;
+        color: var(--text-main);
+      }
+      .summary strong {
+        color: var(--accent);
+        font-weight: 600;
+      }
 
-  .contact {
-    font-size: 10pt;
-    color: var(--stone);
-    line-height: 1.6;
-  }
-  .contact a { color: var(--dark-warm); }
+      /* Timeline */
+      .timeline {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+        margin-bottom: var(--layout-gap);
+      }
+      .tl-year {
+        font-size: 16px;
+        font-family: var(--font-mono);
+        font-weight: 700;
+        color: var(--accent);
+        margin-bottom: 4px;
+      }
+      .tl-title {
+        font-size: 15px;
+        font-weight: 600;
+        margin-bottom: 8px;
+      }
+      .tl-desc {
+        font-size: 13px;
+        color: var(--text-muted);
+        line-height: 1.6;
+      }
 
-  /* METRICS */
-  .metrics { display: flex; gap: 6mm; margin-bottom: 3mm; margin-left: 0; margin-right: 0; }
-  .metric {
-    flex: 1;
-    background: transparent;
-    padding: 1mm 0;
-    display: flex;
-    align-items: baseline;
-    gap: 1.8mm;
-    break-inside: avoid;
-  }
-  .metric-value {
-    font-family: var(--serif);
-    font-size: 14pt;
-    font-weight: 500;
-    color: var(--brand);
-    line-height: 1;
-    font-variant-numeric: tabular-nums;
-    white-space: nowrap;
-  }
-  .metric-label { font-size: 10pt; color: var(--olive); line-height: 1.2; }
+      /* Projects */
+      .project {
+        margin-bottom: 24px;
+        padding-bottom: 24px;
+        border-bottom: 1px dashed var(--border);
+      }
+      .project:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
 
-  .metric-value .unit {
-    font-size: 11.5pt;
-    margin-left: 0.3mm;
-    font-weight: 500;
-    color: var(--brand);
-  }
+      .proj-header {
+        display: flex;
+        align-items: baseline;
+        gap: 12px;
+        margin-bottom: 12px;
+      }
+      .proj-name {
+        font-size: 16px;
+        font-weight: 600;
+      }
+      .proj-type {
+        font-size: 13px;
+        color: var(--text-muted);
+      }
+      .proj-role {
+        margin-left: auto;
+        font-size: 12px;
+        padding: 2px 8px;
+        border: 1px solid var(--accent);
+        color: var(--accent);
+        border-radius: var(--radius);
+      }
 
-  /* SECTION */
-  .section-title {
-    font-family: var(--serif);
-    font-size: 14pt;
-    font-weight: 500;
-    color: var(--near-black);
-    border-left: 2.5pt solid var(--brand);
-    border-radius: 1.5pt;
-    padding: 0 0 0 8pt;
-    margin: 5mm 0 1.6mm 0;
-    display: flex;
-    align-items: baseline;
-    gap: 2mm;
-  }
-  .section-title .sub {
-    margin-left: auto;
-    font-family: var(--serif);
-    font-weight: 400;
-    font-size: 10pt;
-    color: var(--stone);
-    letter-spacing: 0.3pt;
-  }
+      .proj-details {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      .proj-row {
+        display: flex;
+        gap: 16px;
+        align-items: baseline;
+      }
+      .proj-label {
+        font-size: 12px;
+        font-weight: 600;
+        color: var(--text-muted);
+        width: 32px;
+        flex-shrink: 0;
+      }
+      .proj-text {
+        font-size: 14px;
+        color: var(--text-main);
+        flex: 1;
+      }
+      .proj-text strong {
+        color: var(--accent);
+      }
 
-  section:first-of-type .section-title { margin-top: 0; }
-  .page-break > .section-title { margin-top: 0; }
+      /* Open Source */
+      .os-intro {
+        font-size: 14px;
+        color: var(--text-muted);
+        margin-bottom: 24px;
+      }
+      .os-intro strong {
+        color: var(--text-main);
+      }
 
-  .section-title + .skill-row { padding-top: 1.2mm; }
-  .section-title + .edu-row { padding-top: 1.2mm; }
+      .os-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px 32px;
+      }
+      .os-item {
+        display: flex;
+        align-items: baseline;
+        gap: 8px;
+        padding-bottom: 8px;
+        border-bottom: 1px solid var(--border);
+      }
+      .os-name {
+        font-size: 15px;
+        font-weight: 600;
+        font-family: var(--font-mono);
+      }
+      .os-desc {
+        font-size: 13px;
+        color: var(--text-muted);
+        flex: 1;
+      }
+      .os-star {
+        font-size: 13px;
+        font-family: var(--font-mono);
+        color: var(--text-light);
+      }
+      .os-star.highlight {
+        color: var(--accent);
+        font-weight: 600;
+      }
 
-  /* SUMMARY */
-  .summary { font-size: 10pt; line-height: 1.45; color: var(--near-black); }
-  .summary .em-brand { color: var(--brand); }
-  .summary .hl { color: var(--brand); }
+      .os-quote {
+        margin-top: 24px;
+        padding: 16px 20px;
+        background: var(--accent-bg);
+        border-left: 4px solid var(--accent);
+        font-size: 13px;
+        color: var(--text-main);
+        border-radius: 0 var(--radius) var(--radius) 0;
+      }
 
-  /* TIMELINE */
-  .timeline { display: flex; gap: 6mm; margin-bottom: 2mm; margin-left: 0; margin-right: 0; }
-  .tl-step {
-    flex: 1; background: transparent;
-    padding: 0.8mm 0;
-    break-inside: avoid;
-  }
-  .tl-top {
-    display: flex; align-items: baseline; gap: 1.5mm;
-    margin-bottom: 0.5mm;
-  }
-  .tl-year {
-    font-family: var(--serif);
-    font-size: 12pt; font-weight: 500;
-    color: var(--brand); line-height: 1;
-  }
-  .tl-head { font-size: 12pt; font-weight: 500; color: var(--near-black); }
-  .tl-body { font-size: 10pt; color: var(--olive); line-height: 1.42; letter-spacing: 0.3pt; }
+      /* Skills */
+      .skill-row {
+        display: flex;
+        gap: 24px;
+        margin-bottom: 16px;
+        align-items: baseline;
+      }
+      .skill-label {
+        width: 120px;
+        flex-shrink: 0;
+        font-weight: 600;
+        color: var(--accent);
+        font-size: 14px;
+      }
+      .skill-text {
+        flex: 1;
+        font-size: 14px;
+        color: var(--text-main);
+      }
+      .skill-text strong {
+        color: var(--text-main);
+      }
 
-  /* PROJECTS */
-  .project {
-    padding: 1.2mm 0 1.2mm 0;
-    border-top: 0.4pt solid var(--border-soft);
-    break-inside: avoid;
-  }
-  .project:first-of-type { border-top: 0.4pt solid var(--border); padding-top: 1.2mm; }
-  .proj-head {
-    display: flex; align-items: baseline;
-    gap: 2mm; margin-bottom: 0.75mm;
-  }
-  .proj-name {
-    font-family: var(--serif);
-    font-size: 12pt; font-weight: 500; color: var(--near-black);
-  }
-  .proj-kind { font-size: 12pt; color: var(--olive); }
-  .proj-role {
-    font-size: 10pt; color: var(--brand); font-weight: 500;
-    margin-left: auto; background: #EEF2F7;
-    padding: 0.4mm 1.2mm; border-radius: 2pt; letter-spacing: 0.05pt;
-  }
-  .proj-lines { display: table; width: 100%; }
-  .proj-row { display: table-row; }
-  .proj-label {
-    display: table-cell; width: 11mm;
-    font-size: 10pt; color: var(--brand);
-    font-weight: 500; letter-spacing: 0.2pt;
-    padding: 0.2mm 0 0.4mm 0; vertical-align: top;
-  }
-  .proj-text {
-    display: table-cell; font-size: 10pt;
-    color: var(--near-black); line-height: 1.42; letter-spacing: 0.3pt;
-    padding: 0 0 0.4mm 0.5mm;
-  }
-  .proj-text .hl { color: var(--brand); }
+      /* Education */
+      .edu-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+      }
+      .edu-school {
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .edu-major {
+        font-size: 13px;
+        color: var(--text-muted);
+        margin-top: 4px;
+      }
+      .edu-year {
+        font-family: var(--font-mono);
+        font-size: 13px;
+        color: var(--text-light);
+      }
 
-  /* PAGE 2 FORCE BREAK */
-  .page-break { break-before: page; }
+      /* ═══════ PRINT ═══════ */
+      @media print {
+        @page {
+          size: A4;
+          margin: 15mm;
+        }
+        body {
+          background: #fff !important;
+          padding: 0;
+        }
+        .resume-container {
+          box-shadow: none !important;
+          padding: 0 !important;
+          max-width: 100% !important;
+          border: none !important;
+        }
+        /* Force light colors for print regardless of theme */
+        * {
+          color: #000 !important;
+        }
+        .metric-val,
+        .tl-year,
+        .skill-label {
+          color: #333 !important;
+        }
+        .os-quote {
+          border-left-color: #000 !important;
+          background: transparent !important;
+        }
+        a {
+          text-decoration: none !important;
+        }
+        .page-break {
+          break-before: page;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="resume-container">
+      <header class="header">
+        <h1 class="header-name">蔡旭东</h1>
+        <h2 class="header-role">PHP / Golang 后端架构</h2>
+        <div class="header-contact">
+          <span><a href="https://github.com/fifsky">GitHub @fifsky</a></span>
+          <span class="sep">/</span>
+          <span><a href="https://fifsky.com">fifsky.com</a></span>
+          <span class="sep">/</span>
+          <span><a href="mailto:job@caixudong.com">job@caixudong.com</a></span>
+          <span class="sep">/</span>
+          <span>18521503623</span>
+          <span class="sep">/</span>
+          <span>38 岁 · 上海</span>
+        </div>
+      </header>
 
-  /* OPEN SOURCE */
-  .os-intro {
-    font-size: 10pt; line-height: 1.42; letter-spacing: 0.3pt;
-    color: var(--near-black);
-    padding: 0; margin: 1.2mm 0 2mm 0;
-    background: transparent;
-    break-inside: avoid;
-  }
-  .os-intro .hl { color: var(--brand); }
-  .os-intro .strong { color: var(--near-black); }
+      <section class="metrics">
+        <div class="metric">
+          <div class="metric-val">17<small>年</small></div>
+          <div class="metric-label">全栈开发经验</div>
+        </div>
+        <div class="metric">
+          <div class="metric-val">11<small>年</small></div>
+          <div class="metric-label">支付系统架构</div>
+        </div>
+        <div class="metric">
+          <div class="metric-val">500<small>+</small></div>
+          <div class="metric-label">开源项目 Stars</div>
+        </div>
+        <div class="metric">
+          <div class="metric-val">3<small>代</small></div>
+          <div class="metric-label">技术栈演进</div>
+        </div>
+      </section>
 
-  .os-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 8mm; row-gap: 1mm;
-  }
-  .os-item {
-    display: flex; align-items: baseline;
-    gap: 2mm; padding: 1mm 0 1mm 0;
-    border-bottom: 0.3pt dotted var(--border);
-    break-inside: avoid;
-  }
-  .os-item:last-child,
-  .os-item:nth-last-child(2):nth-child(odd) { border-bottom: none; }
-  .os-name {
-    font-family: var(--serif);
-    font-size: 11pt; font-weight: 500;
-    flex-shrink: 0; min-width: 14mm;
-  }
-  .os-name a { color: var(--brand); }
-  .os-desc { font-size: 10pt; color: var(--olive); line-height: 1.42; flex: 1; }
-  .os-star {
-    font-size: 10pt; color: var(--dark-warm);
-    font-weight: 500; white-space: nowrap; flex-shrink: 0; min-width: 7.5mm; text-align: right;
-  }
-  .os-star.big { color: var(--brand); font-size: 10pt; }
+      <section>
+        <h3 class="section-title">个人简介</h3>
+        <div class="summary">
+          全栈工程师，现任 Dentsu VeryStar 支付技术总监。<strong
+            >11 年支付系统架构经验</strong
+          >，带领技术团队从零搭建线下聚合支付平台，主导技术选型、Golang
+          框架建设与全链路可观测性体系落地。技术栈覆盖
+          PHP、Golang、Node.js，深耕分布式架构、MySQL 优化与 CI/CD 工程效能。
+        </div>
+      </section>
 
-  .os-highlight {
-    margin-top: 2.5mm;
-    padding: 1.8mm 2.8mm;
-    background: var(--brand-tint);
-    border-left: 1.4pt solid var(--brand);
-    font-size: 10pt; line-height: 1.42;
-    color: var(--near-black);
-    letter-spacing: 0.3pt;
-    break-inside: avoid;
-  }
-  .os-highlight .hl { color: var(--brand); }
-  .os-highlight .tag {
-    display: inline-block;
-    background: var(--brand); color: var(--ivory);
-    font-size: 10pt; font-weight: 500;
-    padding: 0.2mm 1.5mm; border-radius: 2pt;
-    margin-right: 1.2mm; letter-spacing: 0.2pt;
-    transform: translateY(-0.2mm);
-  }
+      <section>
+        <h3 class="section-title">
+          工作经历
+          <span class="section-subtitle"
+            >2009.05 - 至今 · 从全栈工程师到技术总监</span
+          >
+        </h3>
 
-  /* SKILLS */
-  .skill-row {
-    display: flex; gap: 2.5mm; padding: 1.7mm 0;
-    border-bottom: 0.3pt dotted var(--border);
-    align-items: baseline;
-  }
-  .skill-row:last-of-type { border-bottom: none; }
-  .skill-label {
-    font-size: 10pt; font-weight: 500;
-    color: var(--brand); letter-spacing: 0.3pt;
-    width: 22mm; flex-shrink: 0;
-    line-height: 1.38;
-  }
-  .skill-body { font-size: 10pt; color: var(--near-black); line-height: 1.42; letter-spacing: 0.3pt; flex: 1; }
-  .skill-body .em-brand { color: var(--brand); }
+        <div class="timeline">
+          <div>
+            <div class="tl-year">2009</div>
+            <div class="tl-title">基础构建</div>
+            <div class="tl-desc">
+              在 PPS 网络电视从 PHP
+              全栈起步，独立负责运维中心、发布系统、搜索引擎等多个核心系统的设计与交付
+            </div>
+          </div>
+          <div>
+            <div class="tl-year">2013</div>
+            <div class="tl-title">创业探索</div>
+            <div class="tl-desc">
+              加入创业公司，从掌纹识别到 NLP
+              全流程独立交付，完成从模块执行到项目主导的角色转型
+            </div>
+          </div>
+          <div>
+            <div class="tl-year">2015</div>
+            <div class="tl-title">支付深耕</div>
+            <div class="tl-desc">
+              加入 Dentsu VeryStar 创建支付团队，从零搭建技术体系，完成 PHP 到
+              Golang 的架构演进与团队规模化
+            </div>
+          </div>
+        </div>
 
-  .no-break { break-inside: avoid; }
+        <div class="project">
+          <div class="proj-header">
+            <span class="proj-name">线下聚合支付平台</span>
+            <span class="proj-type">/ 支付核心系统</span>
+            <span class="proj-role">方向主导</span>
+          </div>
+          <div class="proj-details">
+            <div class="proj-row">
+              <span class="proj-label">角色</span>
+              <span class="proj-text"
+                >2015 年从零创建支付技术团队，搭建线下聚合支付平台，覆盖 POS
+                机具收单、电子券核销、CRM
+                会员营销等产品线，服务品牌零售商户</span
+              >
+            </div>
+            <div class="proj-row">
+              <span class="proj-label">动作</span>
+              <span class="proj-text"
+                >主导技术选型与架构设计：基于 NW.js 开发跨平台 POS
+                客户端，Golang 重构核心交易链路，引入 Protobuf + Gin
+                协议体系，建设 CI/CD 自动发布流水线</span
+              >
+            </div>
+            <div class="proj-row">
+              <span class="proj-label">结果</span>
+              <span class="proj-text"
+                >平台支撑<strong>日交易量百万级</strong>，技术栈从 PHP
+                平滑迁移至 Golang 微服务体系。团队从 1
+                人扩展至完整编制，覆盖客户端、服务端、数据与运维全链</span
+              >
+            </div>
+          </div>
+        </div>
 
-  /* EDUCATION */
-  .edu-row {
-    display: flex; justify-content: space-between;
-    align-items: baseline; font-size: 10.5pt; padding: 1.7mm 0;
-  }
-  .edu-row .school {
-    font-family: var(--serif);
-    font-weight: 500; font-size: 12pt;
-  }
-  .edu-row .major { color: var(--olive); font-size: 10.5pt; }
-  .edu-row .date { color: var(--stone); font-variant-numeric: tabular-nums; font-size: 10pt; }
-</style>
-</head>
-<body>
+        <div class="project">
+          <div class="proj-header">
+            <span class="proj-name">全链路可观测性基础设施</span>
+            <span class="proj-type">/ 基础设施</span>
+            <span class="proj-role">架构主导</span>
+          </div>
+          <div class="proj-details">
+            <div class="proj-row">
+              <span class="proj-label">角色</span>
+              <span class="proj-text"
+                >主导实施全链路可观测性架构，解决微服务体系下排障困难、性能感知滞后的问题，为团队建立统一的可观测性标准</span
+              >
+            </div>
+            <div class="proj-row">
+              <span class="proj-label">动作</span>
+              <span class="proj-text"
+                >基于 <strong>OpenTelemetry</strong> 统一 logs、traces、metrics
+                三大信号，接入 Jaeger + Prometheus + Grafana + ELK
+                技术栈，制定全团队埋点规范与告警策略</span
+              >
+            </div>
+            <div class="proj-row">
+              <span class="proj-label">结果</span>
+              <span class="proj-text"
+                >故障定位时间从<strong>小时级缩短至分钟级</strong>，线上问题
+                MTTR
+                显著下降，推动团队从被动响应式运维转向主动可观测性驱动的稳定性治理</span
+              >
+            </div>
+          </div>
+        </div>
 
-<!-- ═══════════ PAGE 1 ═══════════ -->
+        <div class="project">
+          <div class="proj-header">
+            <span class="proj-name">Golang 基础框架与工程效能</span>
+            <span class="proj-type">/ 工程效能</span>
+            <span class="proj-role">技术负责人</span>
+          </div>
+          <div class="proj-details">
+            <div class="proj-row">
+              <span class="proj-label">角色</span>
+              <span class="proj-text"
+                >作为团队 Golang
+                技术负责人，建设内部基础库与开发框架，统一团队编码规范，推动工程效能体系从零到一</span
+              >
+            </div>
+            <div class="proj-row">
+              <span class="proj-label">动作</span>
+              <span class="proj-text"
+                >开发 <strong>gee</strong> 快速开发框架（Gin + Protobuf）、gosql
+                ORM、envconf 配置库、logger 日志库等基础设施；引入 Wire
+                依赖注入与单元测试规范，推广 Drone CI + 企业微信通知</span
+              >
+            </div>
+            <div class="proj-row">
+              <span class="proj-label">结果</span>
+              <span class="proj-text"
+                >新项目启动时间从 3
+                天缩短至<strong>半天</strong>，团队代码风格统一，测试覆盖率显著提升。多个基础库开源至
+                GitHub，其中 gosql 获 296 stars</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
 
-<div class="header">
-  <div class="name serif">蔡旭东</div>
-  <div class="role-line">PHP / Golang 后端架构</div>
-  <div class="contact">
-    <a href="https://github.com/fifsky">GitHub @fifsky</a> · <a href="https://fifsky.com">fifsky.com</a> · <a href="mailto:job@caixudong.com">job@caixudong.com</a> · <a href="tel:18521503623">18521503623</a> · 38 岁在上海
-  </div>
-</div>
+      <div class="page-break"></div>
 
-<div class="metrics">
-  <div class="metric"><span class="metric-value serif">17<span class="unit">年</span></span><span class="metric-label">全栈开发经验</span></div>
-  <div class="metric"><span class="metric-value serif">11<span class="unit">年</span></span><span class="metric-label">支付系统架构</span></div>
-  <div class="metric"><span class="metric-value serif">500<span class="unit">+</span></span><span class="metric-label">开源项目 Stars</span></div>
-  <div class="metric"><span class="metric-value serif">3<span class="unit">代</span></span><span class="metric-label">技术栈演进</span></div>
-</div>
+      <section>
+        <h3 class="section-title">
+          开源项目
+          <span class="section-subtitle"
+            >2015 - 至今 · 独立维护 12+ 个项目</span
+          >
+        </h3>
+        <div class="os-intro">
+          以解决实际工程问题为出发点，持续输出 Golang、PHP、DevOps
+          领域的开源工具与库。代码风格务实，文档完备，多个项目被团队与社区采纳。GitHub
+          累计 <strong>500+ stars · 88 followers · 69 public repos</strong>。
+        </div>
 
-<section>
-  <div class="section-title">个人简介</div>
-  <div class="summary">
-    全栈工程师，现任 Dentsu VeryStar 支付技术总监。<span class="hl">11 年支付系统架构经验</span>，带领技术团队从零搭建线下聚合支付平台，主导技术选型、Golang 框架建设与全链路可观测性体系落地。技术栈覆盖 PHP、Golang、Node.js，深耕分布式架构、MySQL 优化与 CI/CD 工程效能。
-  </div>
-</section>
+        <div class="os-grid">
+          <div class="os-item">
+            <span class="os-name"
+              ><a href="https://github.com/ilibs/gosql">gosql</a></span
+            >
+            <span class="os-desc">基于 sqlx 的轻量 ORM</span>
+            <span class="os-star highlight">★ 296</span>
+          </div>
+          <div class="os-item">
+            <span class="os-name"
+              ><a href="https://github.com/fifsky/ssh-action"
+                >ssh-action</a
+              ></span
+            >
+            <span class="os-desc">SSH 远程执行 CI/CD 部署利器</span>
+            <span class="os-star highlight">★ 167</span>
+          </div>
+          <div class="os-item">
+            <span class="os-name"
+              ><a href="https://github.com/fifsky/genstruct">genstruct</a></span
+            >
+            <span class="os-desc">数据库表结构自动生成 Struct</span>
+            <span class="os-star">★ 18</span>
+          </div>
+          <div class="os-item">
+            <span class="os-name"
+              ><a href="https://github.com/goapt/gee">gee</a></span
+            >
+            <span class="os-desc">Gin + Protobuf 快速开发框架</span>
+            <span class="os-star">★ 3</span>
+          </div>
+          <div class="os-item">
+            <span class="os-name"
+              ><a href="https://github.com/fifsky/drone-wechat-work"
+                >drone-wechat</a
+              ></span
+            >
+            <span class="os-desc">Drone CI 企业微信机器人通知</span>
+            <span class="os-star">★ 7</span>
+          </div>
+          <div class="os-item">
+            <span class="os-name"
+              ><a href="https://github.com/fifsky/docker-php"
+                >docker-php</a
+              ></span
+            >
+            <span class="os-desc">PHP 开发环境编排</span>
+            <span class="os-star">★ 8</span>
+          </div>
+        </div>
 
-<section>
-  <div class="section-title">工作经历<span class="sub">2009.05 - 至今 · 从全栈工程师到技术总监</span></div>
+        <div class="os-quote">
+          <strong>社区采纳：</strong>gosql 被多个团队用于生产环境，项目持续维护
+          5 年以上。ssh-action 在 GitHub Actions
+          市场被广泛使用，累计数千次安装，是同类 Action 中 Star
+          数最高的中文社区项目之一。
+        </div>
+      </section>
 
-  <div class="timeline">
-    <div class="tl-step">
-      <div class="tl-top"><div class="tl-year serif">2009</div><div class="tl-head">基础构建</div></div>
-      <div class="tl-body">在 PPS 网络电视从 PHP 全栈起步，独立负责运维中心、发布系统、搜索引擎等多个核心系统的设计与交付</div>
+      <section>
+        <h3 class="section-title">核心能力</h3>
+
+        <div class="skill-row">
+          <div class="skill-label">分布式后端架构</div>
+          <div class="skill-text">
+            11
+            年服务端架构经验，熟练掌握<strong>分布式事务、微服务治理与高可用设计</strong>。主导线下支付平台从单体到微服务的架构演进，对拆分策略、数据一致性、容错降级有丰富实战积累
+          </div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-label">Golang 技术栈</div>
+          <div class="skill-text">
+            深度掌握 Goroutine、Channel、接口设计与内存模型，主导团队<strong
+              >PHP → Golang 技术栈迁移</strong
+            >。开发 gee、gosql、logger 等基础框架，有完整的生产级项目交付经验
+          </div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-label">可观测性与稳定性</div>
+          <div class="skill-text">
+            基于 <strong>OpenTelemetry</strong> 实施全链路 logs、traces、metrics
+            统一采集与分析，搭建 Jaeger + Prometheus + Grafana + ELK
+            可观测性体系，制定全团队埋点规范与 SLO 告警策略
+          </div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-label">数据库与中间件</div>
+          <div class="skill-text">
+            精通 <strong>MySQL 索引优化与分布式设计</strong>，熟悉阿里云 DRDS
+            分布式数据库、分析型数据库与大数据计算服务。掌握 Redis、NSQ
+            消息队列集群原理与生产运维
+          </div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-label">工程效能与全栈</div>
+          <div class="skill-text">
+            全栈能力覆盖 PHP、Node.js、React、Vue，熟悉 NW.js
+            跨平台桌面开发。深耕 <strong>CI/CD 自动化与容器化部署</strong>，推广
+            Git + Drone + Docker 标准化交付流程
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h3 class="section-title">教育背景</h3>
+        <div class="edu-row">
+          <div>
+            <div class="edu-school">武汉工业学院工商学院</div>
+            <div class="edu-major">
+              计算机应用技术 · 大专 ·
+              在校期间开始接外包项目，毕业即具备独立开发能力
+            </div>
+          </div>
+          <div class="edu-year">2005 - 2008</div>
+        </div>
+      </section>
     </div>
-    <div class="tl-step">
-      <div class="tl-top"><div class="tl-year serif">2013</div><div class="tl-head">创业探索</div></div>
-      <div class="tl-body">加入创业公司，从掌纹识别到 NLP 全流程独立交付，完成从模块执行到项目主导的角色转型</div>
-    </div>
-    <div class="tl-step">
-      <div class="tl-top"><div class="tl-year serif">2015</div><div class="tl-head">支付深耕</div></div>
-      <div class="tl-body">加入 Dentsu VeryStar 创建支付团队，从零搭建技术体系，完成 PHP 到 Golang 的架构演进与团队规模化</div>
-    </div>
-  </div>
-
-  <!-- Project 1 -->
-  <div class="project">
-    <div class="proj-head">
-      <span class="proj-name serif">线下聚合支付平台</span>
-      <span class="proj-kind">· 支付核心系统</span>
-      <span class="proj-role">方向主导</span>
-    </div>
-    <div class="proj-lines">
-      <div class="proj-row">
-        <div class="proj-label">角色</div>
-        <div class="proj-text">2015 年从零创建支付技术团队，搭建线下聚合支付平台，覆盖 POS 机具收单、电子券核销、CRM 会员营销等产品线，服务品牌零售商户</div>
-      </div>
-      <div class="proj-row">
-        <div class="proj-label">动作</div>
-        <div class="proj-text">主导技术选型与架构设计：基于 NW.js 开发跨平台 POS 客户端，Golang 重构核心交易链路，引入 Protobuf + Gin 协议体系，建设 CI/CD 自动发布流水线</div>
-      </div>
-      <div class="proj-row">
-        <div class="proj-label">结果</div>
-        <div class="proj-text">平台支撑<span class="hl">日交易量百万级</span>，技术栈从 PHP 平滑迁移至 Golang 微服务体系。团队从 1 人扩展至完整编制，覆盖客户端、服务端、数据与运维全链</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Project 2 -->
-  <div class="project">
-    <div class="proj-head">
-      <span class="proj-name serif">全链路可观测性基础设施</span>
-      <span class="proj-kind">· 基础设施</span>
-      <span class="proj-role">架构主导</span>
-    </div>
-    <div class="proj-lines">
-      <div class="proj-row">
-        <div class="proj-label">角色</div>
-        <div class="proj-text">主导实施全链路可观测性架构，解决微服务体系下排障困难、性能感知滞后的问题，为团队建立统一的可观测性标准</div>
-      </div>
-      <div class="proj-row">
-        <div class="proj-label">动作</div>
-        <div class="proj-text">基于 <span class="hl">OpenTelemetry</span> 统一 logs、traces、metrics 三大信号，接入 Jaeger + Prometheus + Grafana + ELK 技术栈，制定全团队埋点规范与告警策略</div>
-      </div>
-      <div class="proj-row">
-        <div class="proj-label">结果</div>
-        <div class="proj-text">故障定位时间从<span class="hl">小时级缩短至分钟级</span>，线上问题 MTTR 显著下降，推动团队从被动响应式运维转向主动可观测性驱动的稳定性治理</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Project 3 -->
-  <div class="project">
-    <div class="proj-head">
-      <span class="proj-name serif">Golang 基础框架与工程效能</span>
-      <span class="proj-kind">· 工程效能</span>
-      <span class="proj-role">技术负责人</span>
-    </div>
-    <div class="proj-lines">
-      <div class="proj-row">
-        <div class="proj-label">角色</div>
-        <div class="proj-text">作为团队 Golang 技术负责人，建设内部基础库与开发框架，统一团队编码规范，推动工程效能体系从零到一</div>
-      </div>
-      <div class="proj-row">
-        <div class="proj-label">动作</div>
-        <div class="proj-text">开发 <span class="hl">gee</span> 快速开发框架（Gin + Protobuf）、gosql ORM、envconf 配置库、logger 日志库等基础设施；引入 Wire 依赖注入与单元测试规范，推广 Drone CI + 企业微信通知</div>
-      </div>
-      <div class="proj-row">
-        <div class="proj-label">结果</div>
-        <div class="proj-text">新项目启动时间从 3 天缩短至<span class="hl">半天</span>，团队代码风格统一，测试覆盖率显著提升。多个基础库开源至 GitHub，其中 gosql 获 296 stars</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- ═══════════ PAGE 2 ═══════════ -->
-
-<section class="page-break">
-  <div class="section-title">开源项目<span class="sub">2015 - 至今 · 独立维护 12+ 个项目</span></div>
-
-  <div class="os-intro">
-    <span class="hl">以解决实际工程问题为出发点</span>，持续输出 Golang、PHP、DevOps 领域的开源工具与库。代码风格务实，文档完备，多个项目被团队与社区采纳。GitHub 累计 <span class="strong">500+ stars · 88 followers · 69 public repos</span>。
-  </div>
-
-  <div class="os-grid">
-    <div class="os-item">
-      <span class="os-name serif"><a href="https://github.com/ilibs/gosql">gosql</a></span>
-      <span class="os-desc">Golang · 基于 sqlx 的轻量 ORM · 支持 MySQL / PostgreSQL</span>
-      <span class="os-star big">★ 296</span>
-    </div>
-    <div class="os-item">
-      <span class="os-name serif"><a href="https://github.com/fifsky/ssh-action">ssh-action</a></span>
-      <span class="os-desc">GitHub Action · SSH 远程执行 · CI/CD 部署利器</span>
-      <span class="os-star big">★ 167</span>
-    </div>
-    <div class="os-item">
-      <span class="os-name serif"><a href="https://github.com/fifsky/genstruct">genstruct</a></span>
-      <span class="os-desc">Golang · 数据库表结构自动生成 Struct · 开发效率工具</span>
-      <span class="os-star">★ 18</span>
-    </div>
-    <div class="os-item">
-      <span class="os-name serif"><a href="https://github.com/goapt/gee">gee</a></span>
-      <span class="os-desc">Golang · Gin + Protobuf 快速开发框架 · 微服务脚手架</span>
-      <span class="os-star">★ 3</span>
-    </div>
-    <div class="os-item">
-      <span class="os-name serif"><a href="https://github.com/fifsky/drone-wechat-work">drone-wechat-work</a></span>
-      <span class="os-desc">Drone CI 插件 · 企业微信机器人通知 · DevOps 工具链</span>
-      <span class="os-star">★ 7</span>
-    </div>
-    <div class="os-item">
-      <span class="os-name serif"><a href="https://github.com/fifsky/docker-php">docker-php</a></span>
-      <span class="os-desc">Docker · PHP 开发环境编排 · 开箱即用的本地开发栈</span>
-      <span class="os-star">★ 8</span>
-    </div>
-  </div>
-
-  <div class="os-highlight">
-    <span class="tag">社区采纳</span>gosql 被多个团队用于生产环境，项目持续维护 5 年以上。ssh-action 在 GitHub Actions 市场被广泛使用，累计<span class="hl">数千次安装</span>，是同类 Action 中 Star 数最高的中文社区项目之一。
-  </div>
-</section>
-
-<section>
-  <div class="section-title">核心能力</div>
-  <div class="skill-row">
-    <div class="skill-label">分布式后端<br>架构</div>
-    <div class="skill-body">11 年服务端架构经验，熟练掌握<span class="em-brand">分布式事务、微服务治理与高可用设计</span>。主导线下支付平台从单体到微服务的架构演进，对拆分策略、数据一致性、容错降级有丰富实战积累</div>
-  </div>
-  <div class="skill-row">
-    <div class="skill-label">Golang<br>技术栈</div>
-    <div class="skill-body">深度掌握 Goroutine、Channel、接口设计与内存模型，主导团队<span class="em-brand">PHP → Golang 技术栈迁移</span>。开发 gee、gosql、logger 等基础框架，有完整的生产级项目交付经验</div>
-  </div>
-  <div class="skill-row">
-    <div class="skill-label">可观测性<br>与稳定性</div>
-    <div class="skill-body">基于 <span class="em-brand">OpenTelemetry</span> 实施全链路 logs、traces、metrics 统一采集与分析，搭建 Jaeger + Prometheus + Grafana + ELK 可观测性体系，制定全团队埋点规范与 SLO 告警策略</div>
-  </div>
-  <div class="skill-row">
-    <div class="skill-label">数据库<br>与中间件</div>
-    <div class="skill-body">精通 <span class="em-brand">MySQL 索引优化与分布式设计</span>，熟悉阿里云 DRDS 分布式数据库、分析型数据库与大数据计算服务。掌握 Redis、NSQ 消息队列集群原理与生产运维</div>
-  </div>
-  <div class="skill-row">
-    <div class="skill-label">工程效能<br>与全栈</div>
-    <div class="skill-body">全栈能力覆盖 PHP、Node.js、React、Vue，熟悉 NW.js 跨平台桌面开发。深耕 <span class="em-brand">CI/CD 自动化与容器化部署</span>，推广 Git + Drone + Docker 标准化交付流程</div>
-  </div>
-</section>
-
-<section class="no-break">
-  <div class="section-title">教育背景</div>
-  <div class="edu-row">
-    <div>
-      <span class="school serif">武汉工业学院工商学院</span>
-      <span class="major">　· 计算机应用技术 · 大专 · 在校期间开始接外包项目，毕业即具备独立开发能力</span>
-    </div>
-    <div class="date">2005 - 2008</div>
-  </div>
-</section>
-
-</body>
+  </body>
 </html>
